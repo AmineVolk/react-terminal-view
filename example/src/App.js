@@ -1,13 +1,20 @@
-import React, { Component } from 'react'
-
-import ExampleComponent from 'react-terminal-view'
+import React, { Component } from "react";
+import Terminal from "react-terminal-view";
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
+      <div
+        style={{
+          height: "100vh",
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <Terminal line1="test" />
       </div>
-    )
+    );
   }
 }
