@@ -52,7 +52,7 @@ export default class Terminal extends Component {
   }
 }
 Terminal.defaultProps = {
-  line1: "Hello",
+  line1: "Hello,",
   line2: "My name's Amine",
   line3: "I'm a full-stack developer",
   line4: "I love everything that's related to new technology",
