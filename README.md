@@ -35,18 +35,18 @@ export default class App extends Component {
 
 ## Result of Example
 
-![](./Result.gif)
+![Result](./Result.gif)
 
 ## Properties
 
-| Propertie             | Description                             |
-| --------------------- | --------------------------------------- |
+| Propertie             | Description                                 |
+| --------------------- | ------------------------------------------- |
 | height                | The height of the terminal view         |
 | width                 | The width of the terminal view          |
-| background            | The background of terminal body         |
-| textColor             | The color of Text in terminal body      |
-| textSize              | The size of text                        |
-| enableTypingAnimation | Enable/desable typing animation fortext |
+| background            | The background of the terminal's body         |
+| textColor             | The text color of the terminal's body      |
+| textSize              | The size of the text                        |
+| enableTypingAnimation | Enable/disable typing animation of the text|
 
 ## License
 

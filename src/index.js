@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Image from "./images/buttons.jpg";
+import Image from "./images/buttons.png";
 import style from "./MyStyles.css";
 export default class Terminal extends Component {
   render() {
@@ -8,11 +8,11 @@ export default class Terminal extends Component {
       height: ${this.props.height}px;
       width: ${this.props.width}px;
       box-shadow: 2px 2px 3px #181818;
-      background: ${this.props.background};
+      background: ${this.props.theme == "White" ? "#e8e8e8" : "#282a36"};
     `;
     const TerminalHeader = styled.div`
       height: 30px;
-      background: black;
+      background: ${this.props.theme == "White" ? "#d9d9d9" : "#21222c"};
     `;
     const TerminalBody = styled.div`
     p {
@@ -52,6 +52,7 @@ export default class Terminal extends Component {
   }
 }
 Terminal.defaultProps = {
+  theme: "Dark",
   line1: "Hello,",
   line2: "My name's Amine",
   line3: "I'm a full-stack developer",
@@ -59,7 +60,7 @@ Terminal.defaultProps = {
   line5: "I hope this component has been useful to you",
   height: 300,
   width: 700,
-  background: "#0e1a2a",
+  background: "#282a36",
   textColor: "#08FDD8",
   textSize: 20,
   enableTypingAnimation: true
