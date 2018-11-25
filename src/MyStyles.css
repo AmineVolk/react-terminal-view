@@ -23,6 +23,26 @@
     animation-duration: 11s;
 }
 
+#six {
+    animation-name: anim6;
+    animation-duration: 15s;
+}
+
+#seven {
+    animation-name: anim7;
+    animation-duration: 18s;
+}
+
+#height {
+    animation-name: anim8;
+    animation-duration: 21s;
+}
+
+#nine {
+    animation-name: anim9;
+    animation-duration: 24s;
+}
+
 @keyframes anim {
     from {
         width: 0;
@@ -57,7 +77,7 @@
     0% {
         width: 0;
     }
-    60% {
+    45% {
         width: 0;
     }
     100% {
@@ -69,7 +89,55 @@
     0% {
         width: 0;
     }
-    75% {
+    50% {
+        width: 0;
+    }
+    100% {
+        width: 100;
+    }
+}
+
+@keyframes anim6 {
+    0% {
+        width: 0;
+    }
+    55% {
+        width: 0;
+    }
+    100% {
+        width: 100;
+    }
+}
+
+@keyframes anim7 {
+    0% {
+        width: 0;
+    }
+    60% {
+        width: 0;
+    }
+    100% {
+        width: 100;
+    }
+}
+
+@keyframes anim8 {
+    0% {
+        width: 0;
+    }
+    65% {
+        width: 0;
+    }
+    100% {
+        width: 100;
+    }
+}
+
+@keyframes anim9 {
+    0% {
+        width: 0;
+    }
+    70% {
         width: 0;
     }
     100% {

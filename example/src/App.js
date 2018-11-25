@@ -3,6 +3,13 @@ import Terminal from "react-terminal-view";
 
 export default class App extends Component {
   render() {
+    var lines = [
+      "Hello,",
+      "My name's Amine",
+      "I'm a full-stack developer",
+      "I love everything that's related to new technology",
+      "I hope this component has been useful to you"
+    ];
     return (
       <div
         style={{
@@ -10,16 +17,11 @@ export default class App extends Component {
           width: "100%",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center"
+          justifyContent: "center",
+          background: "black"
         }}
       >
-        <Terminal
-          line1="Hello"
-          line2="My name's Amine"
-          line3="I'm a full-stack developer"
-          line4="I love everything that's related to new technology"
-          line5="I hope this component has been useful to you"
-        />
+        <Terminal lines={lines} theme="White" textColor="black" />
       </div>
     );
   }
