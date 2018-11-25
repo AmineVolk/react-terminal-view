@@ -36,7 +36,7 @@ export default class App extends Component {
 
 ## Result of Example
 
-![Result](./terminal-dark.gif)
+![Result](https://raw.githubusercontent.com/AmineVolk/react-terminal-view/master/terminal-dark.gif)
 
 
 ## White theme
@@ -63,7 +63,7 @@ export default class App extends Component {
 ```
 
 ## Result
-![Result](./terminal-white.gif)
+![Result](https://raw.githubusercontent.com/AmineVolk/react-terminal-view/master/terminal-white.gif)
 
 ## Properties
 

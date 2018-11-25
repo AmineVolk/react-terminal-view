@@ -21,7 +21,7 @@ export default class App extends Component {
           background: "black"
         }}
       >
-        <Terminal lines={lines} theme="White" textColor="black" />
+        <Terminal lines={lines} />
       </div>
     );
   }
