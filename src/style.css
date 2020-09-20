@@ -1,0 +1,160 @@
+#first {
+  animation-name: anim;
+  animation-duration: 4s;
+}
+
+#second {
+  animation-name: anim2;
+  animation-duration: 4s;
+}
+
+#therd {
+  animation-name: anim3;
+  animation-duration: 5s;
+}
+
+#four {
+  animation-name: anim4;
+  animation-duration: 7s;
+}
+
+#five {
+  animation-name: anim5;
+  animation-duration: 11s;
+}
+
+#six {
+  animation-name: anim6;
+  animation-duration: 15s;
+}
+
+#seven {
+  animation-name: anim7;
+  animation-duration: 18s;
+}
+
+#height {
+  animation-name: anim8;
+  animation-duration: 21s;
+}
+
+#nine {
+  animation-name: anim9;
+  animation-duration: 24s;
+}
+
+@keyframes anim {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes anim3 {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes anim4 {
+  0% {
+    width: 0;
+  }
+  45% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes anim5 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes anim6 {
+  0% {
+    width: 0;
+  }
+  55% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes anim7 {
+  0% {
+    width: 0;
+  }
+  60% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes anim8 {
+  0% {
+    width: 0;
+  }
+  65% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+@keyframes anim9 {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 0;
+  }
+  100% {
+    width: 100;
+  }
+}
+
+span {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+::selection {
+  background: black;
+}
