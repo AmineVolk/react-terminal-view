@@ -13,57 +13,38 @@ npm install --save react-terminal-view
 ## Usage
 
 ```jsx
-import React, { Component } from "react";
-import Terminal from "react-terminal-view";
+import React, { Component } from 'react'
+import Terminal from 'react-terminal-view'
 
 export default class App extends Component {
-  render() {
-     var lines = [
-      "Hello,",
+  render () {
+    let lines = [
+      'Hello,',
       "My name's Amine",
       "I'm a full-stack developer",
       "I love everything that's related to new technology",
-      "I hope this component has been useful to you"
-    ];
+      'I hope this component has been useful to you'
+    ]
     return (
       <div>
-          <Terminal lines={lines} />
+        <Terminal lines={lines} />
       </div>
-    );
+    )
   }
 }
 ```
 
 ## Result of Example
 
-![Result](https://raw.githubusercontent.com/AmineVolk/react-terminal-view/master/terminal-dark.gif)
+![Result](https://raw.githubusercontent.com/AmineVolk/react-terminal-view/master/example.gif)
 
+## Reduce and expand window
 
-## White theme
-```jsx
-import React, { Component } from "react";
-import Terminal from "react-terminal-view";
+![Result](https://raw.githubusercontent.com/AmineVolk/react-terminal-view/master/reduce-example.gif)
 
-export default class App extends Component {
-  render() {
-     var lines = [
-      "Hello,",
-      "My name's Amine",
-      "I'm a full-stack developer",
-      "I love everything that's related to new technology",
-      "I hope this component has been useful to you"
-    ];
-    return (
-      <div>
-          <Terminal lines={lines}  theme="White" textColor="black"/>
-      </div>
-    );
-  }
-}
-```
+## Close window
 
-## Result
-![Result](https://raw.githubusercontent.com/AmineVolk/react-terminal-view/master/terminal-white.gif)
+![Result](https://raw.githubusercontent.com/AmineVolk/react-terminal-view/master/close-example.gif)
 
 ## Properties
 
