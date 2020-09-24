@@ -15,9 +15,8 @@
     "js"
   ],
   "scripts": {
-    "build": "webpack",
-    "prepublishOnly": "webpack --mode=production"
-  },
+    "build": "webpack"
+   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
@@ -50,5 +49,8 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "^1.1.4"
+  },
+  "publishConfig":{ 
+    "registry": "https://npm.pkg.github.com/@AmineVolk" 
   }
 }
