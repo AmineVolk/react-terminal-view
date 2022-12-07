@@ -167,7 +167,7 @@ Terminal.propTypes = {
   background: PropTypes.string.isRequired,
   textColor: PropTypes.string.isRequired,
   textSize: PropTypes.number.isRequired,
-  lines:PropTypes.array.isRequired,
+  lines: PropTypes.array.isRequired,
   theme: PropTypes.string.isRequired,
   enableTypingAnimation: PropTypes.bool.isRequired
 };
