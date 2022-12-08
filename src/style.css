@@ -1,44 +1,68 @@
-#first {
+@media (max-width: 600px) {
+  .terminaltext {
+    font-size: 16px !important;
+  }
+}
+ 
+#container{
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+  transition: all 0.5s ease;
+  border-radius: 8px;
+  min-width: 200px;
+  margin: 7px;
+}
+
+#terminalBody{
+  font-family: "Courier";
+  margin: 10px 10px 0 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: break-word;
+  width: 90%;
+  padding-bottom: 20px
+
+}
+#text1 {
   animation-name: anim;
   animation-duration: 4s;
 }
 
-#second {
+#text2 {
   animation-name: anim2;
   animation-duration: 4s;
 }
 
-#therd {
+#text3 {
   animation-name: anim3;
   animation-duration: 5s;
 }
 
-#four {
+#text4 {
   animation-name: anim4;
   animation-duration: 7s;
 }
 
-#five {
+#text5 {
   animation-name: anim5;
   animation-duration: 11s;
 }
 
-#six {
+#text6 {
   animation-name: anim6;
   animation-duration: 15s;
 }
 
-#seven {
+#text7 {
   animation-name: anim7;
   animation-duration: 18s;
 }
 
-#height {
+#text8 {
   animation-name: anim8;
   animation-duration: 21s;
 }
 
-#nine {
+#text9 {
   animation-name: anim9;
   animation-duration: 24s;
 }

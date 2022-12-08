@@ -7,7 +7,7 @@ export default class App extends Component {
       "Hello,",
       "My name's Amine",
       "I'm a full-stack developer",
-      "I love everything that's related to new technology",
+      "I love everything that's related to new technology xxxxxxx xxxxxxxxxxxxx xxxxxxxx xxxxxxxx",
       "I hope this component has been useful to you"
     ];
     return (
@@ -18,7 +18,7 @@ export default class App extends Component {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "black"
+          background: "white"
         }}
       >
         <Terminal lines={lines} />

@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: "./src/react-terminal-view.js",
+  entry: "./src/index.js",
   output: {
     path: path.resolve("dist"),
     filename: "react-terminal-view.js",
@@ -17,7 +17,7 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: ["react"]
+              presets: ["@babel/preset-env"]
             }
           }
         ]
