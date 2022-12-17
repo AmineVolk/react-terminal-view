@@ -1,0 +1,44 @@
+$textColor: #08FDD8;
+@media (max-width: 600px) {
+  .terminaltext {
+    font-size: 16px !important;
+  }
+}
+
+#container{
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+  transition: all 0.5s ease;
+  border-radius: 8px;
+  min-width: 200px;
+  margin: 7px;
+}
+
+#terminalBody{
+  font-family: "Courier";
+  margin: 10px 10px 0 25px;
+  overflow: hidden;
+  // white-space: nowrap;
+  // word-break: break-word;
+  padding-bottom: 20px
+}
+
+ 
+
+#terminaltext{
+  font-size: 2em;
+  margin: 0;
+  font-family: "Courier New";
+
+  &:after{
+    content: "|";
+    animation: blink 500ms linear infinite alternate;
+  }
+}
+
+@keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+::selection {
+  background: black;
+}

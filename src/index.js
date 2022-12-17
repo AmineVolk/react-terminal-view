@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./style.scss";
 import PropTypes from "prop-types";
 import { ButtonActions } from "./ButtonActions";
 import { BUTTON_TYPES } from "./const";
@@ -7,6 +7,7 @@ class Terminal extends React.Component {
   constructor(props) {
     super();
     this.state = {
+      initHeight: null,
       height: props.height,
       width: props.width,
       isExpandClicked: false,
@@ -14,32 +15,50 @@ class Terminal extends React.Component {
       isCloseClicked: false,
       shouldHideContent: false
     };
+    this.terminalRef = React.createRef();
   }
 
   handleClickExpand = () => {
-    const { isExpandClicked, isReduceClicked } = this.state;
-    const { height, width } = this.props;
+    const { isExpandClicked } = this.state;
+    const { width } = this.props;
     this.setState({
       width: isExpandClicked ? width : width + 30,
-      height: isExpandClicked || isReduceClicked ? height : height + 30,
-      isExpandClicked: !isExpandClicked,
-      isReduceClicked: false,
-      isCloseClicked: false
+      height: this.state.initHeight,
+      isExpandClicked: true
     });
+
+    // to avoid display text, before the end of the animation.
+    setTimeout(() => {
+      this.setState({
+        isReduceClicked: false,
+        isCloseClicked: false
+      });
+    }, 500);
   };
 
   handleClickReduce = () => {
+    console.log(`--- ${JSON.stringify("reduce", null, 2)}`);
+
+    // init the component height, to make the height transition working.
     this.setState({
-      height: 30,
-      isReduceClicked: true
+      height: this.terminalRef.current.clientHeight,
+      initHeight: this.terminalRef.current.clientHeight
     });
+    setTimeout(() => {
+      this.setState({
+        height: 30,
+        isReduceClicked: true,
+        isExpandClicked: false,
+        isCloseClicked: false
+      });
+    }, 200);
   };
 
   handleClickClose = () => {
     this.setState({ height: 30, width: 75, isCloseClicked: true }, () => {
       setTimeout(() => {
         this.setState({ shouldHideContent: true });
-      }, 700);
+      }, 1000);
     });
   };
 
@@ -53,6 +72,30 @@ class Terminal extends React.Component {
     handleClickByTypes[type]();
   };
   render() {
+    console.log(`--- ${JSON.stringify("*********************", null, 2)}`);
+
+    console.log(
+      `--- isReduceClicked : ${JSON.stringify(
+        this.state.isReduceClicked,
+        null,
+        2
+      )}`
+    );
+    console.log(
+      `--- isCloseClicked : ${JSON.stringify(
+        this.state.isCloseClicked,
+        null,
+        2
+      )}`
+    );
+    console.log(
+      `--- isExpandClicked : ${JSON.stringify(
+        this.state.isExpandClicked,
+        null,
+        2
+      )}`
+    );
+
     const {
       lines,
       textColor,
@@ -71,6 +114,7 @@ class Terminal extends React.Component {
 
     return (
       <div
+        ref={this.terminalRef}
         id="container"
         style={{
           height,
@@ -91,13 +135,12 @@ class Terminal extends React.Component {
         >
           {lines?.map((item, index) => (
             <p
-              className="terminaltext"
+              className={enableTypingAnimation ? "terminaltext" : ""}
               key={index}
               style={{
                 color: textColor,
                 fontSize: textSize
               }}
-              id={enableTypingAnimation ? `text${index + 1}` : ""}
             >
               $ {item}
             </p>
